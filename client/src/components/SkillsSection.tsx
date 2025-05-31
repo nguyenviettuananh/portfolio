@@ -31,7 +31,7 @@ export default function SkillsSection() {
       title: "DevOps Tools",
       skills: [
         { name: "Docker", level: 5 },
-        { name: "Kubernetes", level: 4 },
+        { name: "Kubernetes", level: 3 },
         { name: "GitHub Actions", level: 4 }
       ],
       gradient: "from-blue-50 to-cyan-50",
@@ -41,9 +41,13 @@ export default function SkillsSection() {
       icon: Cloud,
       title: "Cloud Platforms",
       skills: [
-        { name: "AWS EKS", level: 5 },
-        { name: "AWS Lambda", level: 4 },
-        { name: "AWS S3", level: 5 }
+        { name: "AWS EKS", level: 3 },
+        { name: "AWS Lambda", level: 5 },
+        { name: "AWS RDS", level: 4 },
+        { name: "AWS Batch", level: 4 },
+        { name: "AWS Step Functions", level: 4 },
+        { name: "AWS SQS", level: 4 },
+        { name: "AWS Glue", level: 4 }
       ],
       gradient: "from-cyan-50 to-blue-50",
       iconBg: "bg-cyan-600"
@@ -85,7 +89,7 @@ export default function SkillsSection() {
           />
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -106,7 +110,7 @@ export default function SkillsSection() {
                   <div className="space-y-3">
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="flex items-center justify-between">
-                        <span className="text-slate-700 font-medium text-sm">{skill.name}</span>
+                        <span className="text-slate-700 font-medium text-xs sm:text-sm">{skill.name}</span>
                         <SkillLevel 
                           level={skill.level} 
                           color={category.iconBg === 'bg-blue-600' ? 'bg-blue-600' : 'bg-cyan-600'} 

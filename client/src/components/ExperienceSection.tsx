@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export default function ExperienceSection() {
   const experiences = [
     {
-      period: "Feb 2025 - Present",
+      period: "Oct 2024 - Present",
       title: "Senior Software Engineer",
       company: "GIAOHANGTIETKIEM",
       status: "current",
@@ -14,7 +14,7 @@ export default function ExperienceSection() {
         "Learning and analyzing legacy systems",
         "Rebuilding and modernizing logistics system"
       ],
-      techStack: [],
+      techStack: ["Java", "MySQL", "Kafka"],
       bgColor: "bg-green-100",
       textColor: "text-green-800",
       dotColor: "bg-green-600",
@@ -108,7 +108,7 @@ export default function ExperienceSection() {
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-200"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-200 z-0"></div>
           
           {/* Experience Items */}
           <div className="space-y-12">
@@ -123,7 +123,7 @@ export default function ExperienceSection() {
               >
                 <div className={`absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 ${exp.dotColor} rounded-full border-4 border-white shadow-lg z-10`}></div>
                 
-                <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:w-1/2 md:pr-8' : 'md:w-1/2 md:ml-auto md:pl-8'}`}>
+                <div className={`ml-12 md:ml-0 w-full ${index % 2 === 0 ? 'md:w-1/2 md:pr-8' : 'md:w-1/2 md:ml-auto md:pl-8'}`}>
                   <Card className="bg-white shadow-lg transform hover:scale-105 transition-all duration-300 border-0">
                     <CardContent className="p-8">
                       <Badge className={`${exp.bgColor} ${exp.textColor} mb-4`}>

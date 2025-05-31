@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-inter bg-slate-50 text-slate-900 overflow-x-hidden">
+    <div className="font-inter bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen">
       <Navigation />
       <HeroSection />
       <AboutSection />

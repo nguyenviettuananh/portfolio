@@ -24,8 +24,8 @@ export default function HeroSection() {
         />
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div 
             className="space-y-8"
             initial={{ opacity: 0, y: 100 }}
@@ -33,17 +33,19 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 Nguyen Viet
                 <span className="text-blue-600"> Tuan Anh</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-slate-600 font-medium">
+              <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 font-medium">
                 Technical Leader & Senior Backend Engineer
               </p>
-              <div className="flex items-center space-x-4 text-slate-500">
-                <MapPin className="w-4 h-4" />
-                <span>Vietnam</span>
-                <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0 text-slate-500">
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Vietnam</span>
+                </div>
+                <span className="hidden sm:block w-1 h-1 bg-slate-300 rounded-full"></span>
                 <span>8+ Years Experience</span>
               </div>
             </div>
@@ -53,15 +55,15 @@ export default function HeroSection() {
               Passionate about solving complex problems and exploring cutting-edge technologies like AI and blockchain.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <a href="#contact" className="inline-flex items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto">
+                <a href="#contact" className="inline-flex items-center justify-center">
                   <span className="font-semibold">Get In Touch</span>
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
-                <a href="#experience" className="font-semibold">
+              <Button asChild variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 w-full sm:w-auto">
+                <a href="#experience" className="font-semibold text-center">
                   View Experience
                 </a>
               </Button>
@@ -78,7 +80,7 @@ export default function HeroSection() {
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
               alt="Professional headshot of Nguyen Viet Tuan Anh" 
-              className="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500" 
+              className="w-full max-w-sm sm:max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500" 
             />
             
             {/* Floating Tech Icons */}

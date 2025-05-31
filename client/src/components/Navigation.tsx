@@ -31,18 +31,18 @@ export default function Navigation() {
         : 'bg-white/90 backdrop-blur-md border-b border-slate-200'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-slate-900">
+        <div className="flex justify-between items-center py-3 sm:py-4">
+          <div className="text-lg sm:text-xl font-bold text-slate-900">
             Tuan Anh
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                className="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 {link.label}
               </a>
