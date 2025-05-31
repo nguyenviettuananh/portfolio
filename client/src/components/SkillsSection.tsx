@@ -98,11 +98,11 @@ export default function SkillsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className={`bg-gradient-to-br ${category.gradient} transform hover:scale-105 transition-all duration-300 shadow-lg border-0 h-full`}>
+              <Card className={`bg-gradient-to-br ${category.gradient} transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-2xl border-0 h-full group`}>
                 <CardContent className="p-6">
                   <div className="text-center mb-6">
-                    <div className={`${category.iconBg} w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                      <category.icon className="w-6 h-6 text-white" />
+                    <div className={`${category.iconBg} w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <category.icon className="w-6 h-6 text-white group-hover:animate-pulse" />
                     </div>
                     <h3 className="text-lg font-semibold text-slate-900">{category.title}</h3>
                   </div>

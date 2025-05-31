@@ -58,10 +58,10 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className={`bg-gradient-to-br ${feature.gradient} text-center transform hover:scale-105 transition-all duration-300 shadow-lg border-0 h-full`}>
+              <Card className={`bg-gradient-to-br ${feature.gradient} text-center transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-2xl border-0 h-full group`}>
                 <CardContent className="p-8">
-                  <div className={`${feature.iconBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className={`${feature.iconBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white group-hover:animate-pulse" />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-4">{feature.title}</h3>
                   <p className="text-slate-600">{feature.description}</p>

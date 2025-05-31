@@ -124,7 +124,7 @@ export default function ExperienceSection() {
                 <div className={`absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 ${exp.dotColor} rounded-full border-4 border-white shadow-lg z-10`}></div>
                 
                 <div className={`ml-12 md:ml-0 w-full ${index % 2 === 0 ? 'md:w-1/2 md:pr-8' : 'md:w-1/2 md:ml-auto md:pl-8'}`}>
-                  <Card className="bg-white shadow-lg transform hover:scale-105 transition-all duration-300 border-0">
+                  <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border-0 group">
                     <CardContent className="p-8">
                       <Badge className={`${exp.bgColor} ${exp.textColor} mb-4`}>
                         {exp.period}
@@ -139,7 +139,7 @@ export default function ExperienceSection() {
                         )}
                       </div>
                       
-                      <h4 className={`text-lg font-semibold mb-4 ${exp.status === 'current' ? 'text-green-600' : exp.company === 'Nano Technologies' ? 'text-cyan-600' : 'text-slate-600'}`}>
+                      <h4 className={`text-lg font-semibold mb-4 group-hover:scale-105 transition-transform duration-300 ${exp.status === 'current' ? 'text-green-600' : exp.company === 'Nano Technologies' ? 'text-cyan-600' : 'text-slate-600'}`}>
                         {exp.company}
                       </h4>
                       

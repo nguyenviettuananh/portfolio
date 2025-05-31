@@ -24,12 +24,12 @@ export default function ScrollToTop() {
   return (
     <Button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 w-12 h-12 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 transform hover:scale-110 transition-all duration-300 ${
-        isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
+      className={`fixed bottom-8 right-8 w-12 h-12 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 transform hover:scale-110 hover:rotate-12 transition-all duration-300 hover:shadow-2xl ${
+        isVisible ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4'
       }`}
       size="icon"
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
     </Button>
   );
 }

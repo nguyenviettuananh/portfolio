@@ -25,9 +25,9 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm' 
+        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg transform scale-[0.99]' 
         : 'bg-white/90 backdrop-blur-md border-b border-slate-200'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +42,7 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>

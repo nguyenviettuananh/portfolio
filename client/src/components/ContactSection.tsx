@@ -67,15 +67,15 @@ export default function ContactSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-slate-800 border-slate-700 transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-slate-800 border-slate-700 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 group hover:bg-slate-700">
                 <CardContent className="p-8">
-                  <div className={`${method.iconBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                    <method.icon className="w-8 h-8 text-white" />
+                  <div className={`${method.iconBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <method.icon className="w-8 h-8 text-white group-hover:animate-pulse" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{method.title}</h3>
                   <a 
                     href={method.href}
-                    className="text-slate-300 hover:text-blue-400 transition-colors duration-300"
+                    className="text-slate-300 hover:text-blue-400 transition-colors duration-300 group-hover:text-white"
                   >
                     {method.value}
                   </a>
