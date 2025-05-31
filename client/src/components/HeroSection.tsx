@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
+import TypewriterEffect from "./TypewriterEffect";
+import ProgressiveBlur from "./ProgressiveBlur";
 
 export default function HeroSection() {
   return (
     <section id="hero" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <ProgressiveBlur />
       <ParticleBackground />
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -68,9 +71,20 @@ export default function HeroSection() {
                 Nguyen Viet
                 <span className="text-blue-600"> Tuan Anh</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 font-medium">
-                Technical Leader & Senior Backend Engineer
-              </p>
+              <div className="text-lg sm:text-xl lg:text-2xl text-slate-600 font-medium h-8 flex items-center">
+                <TypewriterEffect 
+                  words={[
+                    "Technical Leader",
+                    "Senior Backend Engineer", 
+                    "Full-Stack Developer",
+                    "System Architect",
+                    "Tech Innovator"
+                  ]}
+                  typeSpeed={80}
+                  deleteSpeed={40}
+                  delayBetween={2000}
+                />
+              </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0 text-slate-500">
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />

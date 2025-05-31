@@ -9,6 +9,8 @@ import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import FloatingElements from "@/components/FloatingElements";
+import MouseTracker from "@/components/MouseTracker";
 
 export default function Home() {
   useEffect(() => {
@@ -29,7 +31,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-inter bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen">
+    <div className="font-inter bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen relative">
+      <MouseTracker />
+      <FloatingElements />
       <Navigation />
       <HeroSection />
       <AboutSection />

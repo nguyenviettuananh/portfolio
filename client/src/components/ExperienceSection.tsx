@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import GlowingCard from "./GlowingCard";
+import TechStackBadge from "./TechStackBadge";
 
 export default function ExperienceSection() {
   const experiences = [
@@ -113,19 +114,19 @@ export default function ExperienceSection() {
           {/* Experience Items */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <motion.div 
+              <div 
                 key={index}
                 className="relative flex items-center"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
               >
                 <div className={`absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 ${exp.dotColor} rounded-full border-4 border-white shadow-lg z-10`}></div>
                 
                 <div className={`ml-12 md:ml-0 w-full ${index % 2 === 0 ? 'md:w-1/2 md:pr-8' : 'md:w-1/2 md:ml-auto md:pl-8'}`}>
-                  <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border-0 group">
-                    <CardContent className="p-8">
+                  <GlowingCard 
+                    className="bg-white" 
+                    glowColor={exp.status === 'current' ? 'green' : exp.company === 'Nano Technologies' ? 'cyan' : 'blue'}
+                    delay={index * 0.1}
+                  >
+                    <div className="p-8">
                       <Badge className={`${exp.bgColor} ${exp.textColor} mb-4`}>
                         {exp.period}
                       </Badge>
@@ -157,17 +158,20 @@ export default function ExperienceSection() {
                           <p className="text-sm font-semibold text-slate-700">Tech Stack:</p>
                           <div className="flex flex-wrap gap-2">
                             {exp.techStack.map((tech, idx) => (
-                              <Badge key={idx} variant="secondary" className={`${exp.bgColor} ${exp.textColor} text-xs`}>
-                                {tech}
-                              </Badge>
+                              <TechStackBadge 
+                                key={idx} 
+                                tech={tech} 
+                                index={idx}
+                                className={`${exp.bgColor} ${exp.textColor}`}
+                              />
                             ))}
                           </div>
                         </div>
                       )}
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </GlowingCard>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
