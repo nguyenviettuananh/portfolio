@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
 import TypewriterEffect from "./TypewriterEffect";
 import ProgressiveBlur from "./ProgressiveBlur";
+import profileImage from "@/assets/profile_image.jpeg";
 
 export default function HeroSection() {
   return (
@@ -76,9 +77,7 @@ export default function HeroSection() {
                   words={[
                     "Technical Leader",
                     "Senior Backend Engineer", 
-                    "Full-Stack Developer",
-                    "System Architect",
-                    "Tech Innovator"
+                    "System Architecture",
                   ]}
                   typeSpeed={80}
                   deleteSpeed={40}
@@ -123,7 +122,7 @@ export default function HeroSection() {
           >
             {/* Professional headshot placeholder */}
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+              src={profileImage} 
               alt="Professional headshot of Nguyen Viet Tuan Anh" 
               className="w-full max-w-sm sm:max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500" 
             />
